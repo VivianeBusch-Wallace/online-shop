@@ -10,7 +10,7 @@ const ProductList = ({ data }) => {
   return (
     <React.Fragment>
       <div className="cart-wrapper"></div>
-      <ul className="product-list">{item}</ul>
+      <ul className="product-list">{items}</ul>
     </React.Fragment>
   );
 };
