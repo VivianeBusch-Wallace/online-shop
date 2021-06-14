@@ -8,7 +8,7 @@ const ProductList = ({ data }) => {
 
   // add each item to cart with click >>
   const addToCart = (item) => {
-    setCart((prevState) => [prevState, item]);
+    setCart((prevState) => [...prevState, item]);
   };
 
   // map through json data to get each item >>

@@ -34,10 +34,17 @@ img {
   width: 20rem;
 }
 
+// form styling
+.form {
+  border: chartreuse 2px solid;
+  margin: 2rem 0;
+}
+
 .cart-wrapper {
   border: cadetblue 2px solid;
   height: auto;
   width: 70vw;
+  margin: 3rem 0;
 }
 .cart-items {
   background-color: rgb(211, 146, 66);
@@ -57,4 +64,9 @@ img {
   gap: 1rem;
   grid-auto-rows: minmax(2rem);
   width: 80vw;
+}
+
+// inventory indicator
+.inventory {
+  color: blue;
 }

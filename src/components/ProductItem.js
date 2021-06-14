@@ -9,7 +9,9 @@ const ProductItem = ({ productInfo, addToCart }) => {
       <h2>{productName}</h2>
       <i>{icon}</i>
       <h4>{price} Euros</h4>
-      <p>Only {inventory} items in stock</p>
+      <p>
+        Only <span className="inventory">{inventory}</span> items left in stock
+      </p>
       <button
         disabled={inventory === 0}
         onClick={() => {
