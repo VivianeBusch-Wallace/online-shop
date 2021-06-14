@@ -56,4 +56,6 @@ export default App;
 
 // Do Not forget:
 //         <ProductList data={userInput ? filteredData : data} />
-// filter function
+// show items in cart somehow
+// style more
+// deploy
