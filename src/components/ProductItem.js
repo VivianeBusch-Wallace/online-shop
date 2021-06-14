@@ -5,7 +5,7 @@ const ProductItem = ({ productInfo, addToCart }) => {
   const { id, productName, icon, price, inventory } = productInfo;
 
   return (
-    <li className="products-wrapper" key={id}>
+    <li className="product-wrapper" key={id}>
       <h2>{productName}</h2>
       <i>{icon}</i>
       <h4>{price} Euros</h4>

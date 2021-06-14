@@ -1,4 +1,10 @@
-// your scss files should import here 💪🏻
+// normalize
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   display: flex;
   justify-content: center;
@@ -8,16 +14,20 @@ body {
 li {
   list-style: none;
 }
+
 button {
   background-color: lightblue;
   border-radius: 5%;
   border: none;
 }
+
 h5 {
   color: red;
 }
+
 i {
   font-size: 2rem;
+  margin: 0 50%;
 }
 
 img {
@@ -26,11 +36,25 @@ img {
 
 .cart-wrapper {
   border: cadetblue 2px solid;
+  height: auto;
+  width: 70vw;
 }
 .cart-items {
-  background-color: bisque;
+  background-color: rgb(211, 146, 66);
+  height: auto;
+  width: auto;
 }
 
-.products-wrapper {
+// list items
+.product-wrapper {
   border: 1px black solid;
+  padding: 0.5rem;
+}
+// ul of li
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-auto-rows: minmax(2rem);
+  width: 80vw;
 }
