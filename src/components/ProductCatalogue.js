@@ -24,7 +24,7 @@ const ProductList = ({ data }) => {
     <React.Fragment>
       <div className="cart-wrapper">
         <h3>Items added to cart:</h3>
-        <div className="cart-items">{cart.join(", ")}</div>
+        {/* <div className="cart-items">{cart.join(", ")}</div> */}
         <button onClick={calculateTotal}>Total bill</button>
         <span> (excl. delivery fees): {totalBill} Euros</span>
       </div>
