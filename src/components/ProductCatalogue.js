@@ -15,7 +15,8 @@ const ProductList = ({ data }) => {
   const items = data.map((item, i) => (
     <ProductItem key={i} productInfo={item} addToCart={addToCart} />
   ));
-  // calculate the total bill on click
+
+  // calculate the total bill on click >>
   const calculateTotal = () => {
     setTotalBill(cart.reduce((acc, cur) => acc + cur.price, 0));
   };

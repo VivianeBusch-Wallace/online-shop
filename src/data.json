@@ -48,5 +48,12 @@
     "icon": "🍣",
     "price": 33,
     "inventory": 3
+  },
+  {
+    "id": 7,
+    "productName": "sushi special",
+    "icon": "🍣",
+    "price": 35,
+    "inventory": 3
   }
 ]

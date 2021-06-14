@@ -11,15 +11,17 @@ function App() {
   // when the user types into searchbar >>
   const handleChange = (e) => {
     setUserInput(e.target.value);
-    const searchText = userInput.toLowerCase();
-    // function for filtering by searchbar input >>
+    const searchText = userInput.toLowerCase().trim();
+    // function for filtering with searchbar input >>
     if (searchText) {
       let filteredArray = data.filter((element) =>
         element.productName.includes(searchText)
       );
       setData(filteredArray);
+      // << filtered only shows results after entering the second character, why?
     } else {
       setData(Data);
+      // << why is this still filtered?
     }
   };
 
@@ -44,7 +46,6 @@ function App() {
           value={userInput}
           placeholder="Search your item"
         />
-        {/* <input type="submit" value="find" onClick={}/> */}
       </form>
       <ProductList data={data} />
     </div>
