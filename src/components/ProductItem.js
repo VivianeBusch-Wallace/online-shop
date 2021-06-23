@@ -2,12 +2,12 @@ import React from "react";
 
 const ProductItem = ({ productInfo, addToCart }) => {
   // deconstruct productInfo >>
-  const { id, productName, icon, price, inventory } = productInfo;
+  const { id, productName, icon, price, inventory, image } = productInfo;
 
   return (
     <li className="product-wrapper" key={id}>
       <h2>{productName}</h2>
-      <i>{icon}</i>
+      <div>{icon || image}</div>
       <h4>{price} Euros</h4>
       <p className="inventory">
         Only{" "}

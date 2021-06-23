@@ -55,5 +55,12 @@
     "icon": "🍣",
     "price": 35,
     "inventory": 3
+  },
+  {
+    "id": 7,
+    "productName": "berliner",
+    "image": "berliner-jennifer-latuperisa-andresen.jpg",
+    "price": 35,
+    "inventory": 3
   }
 ]
