@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Data from "./data.json";
+// import Data from "./data.json"; // old way
 import ProductList from "./components/ProductCatalogue";
+import { Store, StoreContext } from "./context";
 
 function App() {
   // new way using context >>
@@ -35,6 +36,10 @@ function App() {
 
   return (
     <div className="App">
+      <StoreContext.Provider value={Store}>
+        <h1>Spend some money in my store</h1>
+        <ProductList />
+      </StoreContext.Provider>
       {/* old way without context >> */}
       {
         // for having homepage and not seeing images do this >>
@@ -57,6 +62,8 @@ function App() {
 }
 
 export default App;
+
+// Create extra component for searchbar?
 
 // Do Not forget:
 //         <ProductList data={userInput ? filteredData : data} />

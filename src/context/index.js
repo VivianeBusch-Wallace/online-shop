@@ -13,3 +13,5 @@ const { Store } = {
 const StoreContext = React.createContext(Store);
 
 export { Store, StoreContext };
+
+//try without the React in front of createContext
