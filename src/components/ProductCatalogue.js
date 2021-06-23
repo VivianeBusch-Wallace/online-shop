@@ -24,8 +24,10 @@ const ProductList = ({ data }) => {
   // };
   console.log({ cart });
   return (
+    // new way with context >>
+    <React.Fragment></React.Fragment>
 
-    // old way >>
+    // old way without context >>
     // <React.Fragment>
     //   <div className="cart-wrapper">
     //     <h3>Items added to cart:</h3>
