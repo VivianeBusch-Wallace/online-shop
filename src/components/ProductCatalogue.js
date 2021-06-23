@@ -9,8 +9,6 @@ const ProductList = () => {
   const store = useContext(StoreContext);
   // console.log(store);
 
-  const [cart, setCart] = useState(store.cart);
-
   // apply state to our bill >>
   const [totalBill, setTotalBill] = useState(0);
 
@@ -18,7 +16,7 @@ const ProductList = () => {
   const products = store.data.map((item, i) => (
     <ProductItem key={i} productInfo={item} addToCart={store.addToCart} />
   ));
-  console.log(cart);
+  console.log(store.cart);
   // console.log(products);
 
   // old way >>
@@ -49,8 +47,8 @@ const ProductList = () => {
         <h3>Items added to cart:</h3>
         <div className="cart-items">
           Cart Items:
-          {cart.length
-            ? cart.map((cartItem, i) => (
+          {store.cart.length
+            ? store.cart.map((cartItem, i) => (
                 <ProductItem key={i} productInfo={cartItem} />
               ))
             : "Nothing in cart"}

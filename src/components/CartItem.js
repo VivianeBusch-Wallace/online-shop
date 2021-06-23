@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductItem = ({ productInfo, addToCart }) => {
+const ProductItem = ({ productInfo }) => {
   // deconstruct productInfo >>
   const { id, productName, icon, price, inventory } = productInfo;
 
@@ -12,15 +12,6 @@ const ProductItem = ({ productInfo, addToCart }) => {
       <p>
         Only <span className="inventory">{inventory}</span> items left in stock.
       </p>
-      <button
-        disabled={inventory === 0}
-        onClick={() => {
-          console.log(productInfo);
-          addToCart(productInfo);
-        }}
-      >
-        {inventory > 0 ? "Add to cart" : "Sold Out"}
-      </button>
     </li>
   );
 };

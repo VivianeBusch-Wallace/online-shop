@@ -9,8 +9,14 @@ const ProductItem = ({ productInfo, addToCart }) => {
       <h2>{productName}</h2>
       <i>{icon}</i>
       <h4>{price} Euros</h4>
-      <p>
-        Only <span className="inventory">{inventory}</span> items left in stock.
+      <p className="inventory">
+        Only{" "}
+        <span>
+          {inventory
+            ? `There are only {inventory} items left in stock. Do you want to buy more?`
+            : "You just added the last item of {productName} into your cart! Phew, just in time!"}
+        </span>{" "}
+        items left in stock.
       </p>
       <button
         disabled={inventory === 0}
