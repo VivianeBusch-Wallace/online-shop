@@ -4,7 +4,7 @@ import ProductList from "./components/ProductCatalogue";
 import { Store, StoreContext } from "./context";
 
 function App() {
-  // new way using context >>
+  // new way using context >> nothing here
 
   // old way >>
   // useState >>
@@ -35,29 +35,10 @@ function App() {
   // };
 
   return (
-    <div className="App">
-      <StoreContext.Provider value={Store}>
-        <h1>Spend some money in my store</h1>
-        <ProductList />
-      </StoreContext.Provider>
-      {/* old way without context >> */}
-      {
-        // for having homepage and not seeing images do this >>
-        //<img src={`${process.env.PUBLIC_URL}/${data[0].img}`} alt="Sushi" />
-        // fontawesome icons and features >>
-        //<FontAwesomeIcon icon={["fab", "apple"]} size="6x" rotation={90} />
-      }
-      {/* <h1>Spend some money in my store</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <input
-          type="text"
-          onChange={handleChange}
-          value={userInput}
-          placeholder="Search your item"
-        />
-      </form>
-      <ProductList data={data} /> */}
-    </div>
+    <StoreContext.Provider value={Store}>
+      <h1>Spend some money in my store</h1>
+      <ProductList />
+    </StoreContext.Provider>
   );
 }
 
@@ -70,3 +51,27 @@ export default App;
 // show items in cart somehow
 // style more
 // deploy
+
+{
+  /* old way without context >> 
+      <div className="App">*/
+}
+{
+  // for having homepage and not seeing images do this >>
+  //<img src={`${process.env.PUBLIC_URL}/${data[0].img}`} alt="Sushi" />
+  // fontawesome icons and features >>
+  //<FontAwesomeIcon icon={["fab", "apple"]} size="6x" rotation={90} />
+}
+{
+  /* <h1>Spend some money in my store</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <input
+          type="text"
+          onChange={handleChange}
+          value={userInput}
+          placeholder="Search your item"
+        />
+      </form>
+      <ProductList data={data} /> */
+}
+// </div>
